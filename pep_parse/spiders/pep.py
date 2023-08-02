@@ -1,7 +1,6 @@
 from re import sub
 from urllib.parse import urljoin
 
-
 import scrapy
 
 from ..items import PepParseItem
