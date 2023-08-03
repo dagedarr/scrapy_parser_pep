@@ -22,7 +22,7 @@ class OutputFile:
         results_dir.mkdir(exist_ok=True)
 
         now = datetime.now()
-        time_mask = now.strftime("%Y-%m-%d_%H-%M-%S")
+        time_mask = now.strftime('%Y-%m-%d_%H-%M-%S')
 
         file_name = f'status_summary_{time_mask}.csv'
         csv_file_path = os.path.join(results_dir, file_name)
@@ -31,8 +31,9 @@ class OutputFile:
             csv_writer = csv.writer(csvfile)
             csv_writer.writerow(['Статус', 'Количество'])
 
-            for status, count in results.items():
-                csv_writer.writerow([status, count])
+            csv_writer.writerows(
+                [status, count] for status, count in results.items()
+            )
 
             csv_writer.writerow(
                 ['Всего', sum([count for count in results.values()])]
