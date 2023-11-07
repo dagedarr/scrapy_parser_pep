@@ -6,7 +6,7 @@
 1. Клонирование репозитория
 
 ```
-git clone https://github.com/dagedarr/bs4_parser_pep.git
+git clone https://github.com/dagedarr/scrapy_parser_pep.git
 
 cd bs4_parser_pep
 ```
